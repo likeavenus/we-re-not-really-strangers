@@ -11,13 +11,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .card {
     width: 92%;
-    height: 310px;
+    height: 550px;
     border-radius: 30px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .8);
     background: #e2e2e2;
     color: #b72e32;
     padding: 20px 0;
@@ -25,10 +26,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    will-change: transform;
+    cursor: grab;
+    user-select: none;
+
+    &.active {
+        z-index: 50;
+    }
 }
 
 .card__body {
-    width: 80%;
+    width: 95%;
     margin: 0 auto 30px;
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "project-x",
+  "name": "we-re-not-really-strangers",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/likeavenus/project-x.git"
+    "url": "git+https://github.com/likeavenus/we-re-not-really-strangers.git"
   },
   "author": "Rafael Guliev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/likeavenus/project-x/issues"
+    "url": "https://github.com/likeavenus/we-re-not-really-strangers/issues"
   },
-  "homepage": "https://github.com/likeavenus/project-x#readme",
+  "homepage": "https://github.com/likeavenus/we-re-not-really-strangers#readme",
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",

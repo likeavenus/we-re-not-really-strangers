@@ -5,6 +5,7 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: $roboto;
+    touch-action: manipulation;
 }
 
 .app {

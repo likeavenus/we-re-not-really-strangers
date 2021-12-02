@@ -1,13 +1,18 @@
-export function dragMove(e) {
-    e.preventDefault();
-    const touch = event.targetTouches[0];
-    const shift = {
-        x: this.getBoundingClientRect().left,
-        y: this.getBoundingClientRect().top,
-    };
+export function dragStart(shift, card) {
+    return function(event) {
+        const touch = event.targetTouches[0];
+        shift.x = touch.clientX - card.getBoundingClientRect().left + touch.radiusX;
+        shift.y = touch.clientY - card.getBoundingClientRect().top + 37;
+    }
+}
 
-    console.log('shift.x', shift.x)
-    console.log('touch.pageX', touch.pageX)
+export function dragMove(shift, card) {
+    return function(e) {
+        e.preventDefault();
+        const touch = e.targetTouches[0];
+        const moveX = touch.clientX - shift.x;
+        const moveY = touch.clientY - shift.y;
 
-    this.style.transform = `translate(${touch.pageX - 80}px, ${touch.pageY - 100}px)`;
+        card.style.transform = `translate(${moveX}px, ${moveY}px) rotate(${moveX * 0.05}deg)`;
+    }
 }

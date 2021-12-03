@@ -37,40 +37,6 @@ export const Game = () => {
       cardRef.current.addEventListener('touchstart', dragStart(shift.current, cardRef.current));
       cardRef.current.addEventListener('touchmove', dragMove(shift.current, cardRef.current));
 
-      // cardRef.current.onmousedown = function(event) {
-      //   let shiftX = event.clientX - cardRef.current.getBoundingClientRect().left;
-      //   let shiftY = event.clientY - cardRef.current.getBoundingClientRect().top;
-      //   console.log('clientX:', event.clientX)
-      //   console.log('getBoundingClientRect', cardRef.current.getBoundingClientRect().left)
-      
-      //   cardRef.current.style.position = 'absolute';
-      //   cardRef.current.style.zIndex = 1000;
-      //   document.body.append(cardRef.current);
-      
-      //   moveAt(event.pageX, event.pageY);
-      
-      //   // переносит мяч на координаты (pageX, pageY),
-      //   // дополнительно учитывая изначальный сдвиг относительно указателя мыши
-      //   function moveAt(pageX, pageY) {
-      //     cardRef.current.style.left = pageX - shiftX + 'px';
-      //     cardRef.current.style.top = pageY - shiftY + 'px';
-      //   }
-      
-      //   function onMouseMove(event) {
-      //     moveAt(event.pageX, event.pageY);
-      //   }
-      
-      //   // передвигаем мяч при событии mousemove
-      //   document.addEventListener('mousemove', onMouseMove);
-      
-      //   // отпустить мяч, удалить ненужные обработчики
-      //   cardRef.current.onmouseup = function() {
-      //     document.removeEventListener('mousemove', onMouseMove);
-      //     cardRef.current.onmouseup = null;
-      //   };
-      
-      // };
-
       return () => {
         cardRef.current.removeEventListener('touchstart', dragStart);
         cardRef.current.removeEventListener('touchmove', dragMove);

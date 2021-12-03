@@ -30,7 +30,7 @@
     will-change: transform;
     cursor: grab;
     user-select: none;
-    transform-origin: top right;
+    // transform-origin: top right;
 
     &.active {
         z-index: 50;

@@ -36,6 +36,9 @@ export const Game = () => {
     if (cardRef.current) {
       cardRef.current.addEventListener('touchstart', dragStart(shift.current, cardRef.current));
       cardRef.current.addEventListener('touchmove', dragMove(shift.current, cardRef.current));
+      cardRef.current.ondragstart = () => {
+        return null;
+      }
 
       return () => {
         cardRef.current.removeEventListener('touchstart', dragStart);

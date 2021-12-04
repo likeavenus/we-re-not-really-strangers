@@ -11,12 +11,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     position: relative;
 }
 
 .card {
-    width: 92%;
-    height: 450px;
+    width: 90%;
+    height: 66%;
     border-radius: 30px;
     box-shadow: 0 0 2px rgba(0, 0, 0, .8);
     background: #e2e2e2;
@@ -38,7 +39,7 @@
 }
 
 .card__body {
-    width: 95%;
+    width: 98%;
     margin: 0 auto 30px;
 }
 

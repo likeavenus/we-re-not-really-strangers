@@ -64,6 +64,8 @@ object-assign
 
 /*! ./factoryWithTypeCheckers */
 
+/*! ./gameSlice */
+
 /*! ./hooks/useDispatch */
 
 /*! ./hooks/useSelector */

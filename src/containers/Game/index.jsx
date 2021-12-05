@@ -7,33 +7,52 @@ import styles from './style.module';
 export const Game = () => {
   const containerRef = useRef();
   const cardRef = useRef();
-  const cards = useSelector(state => state.game.cards);
+  const cards = useSelector((state) => state.game.cards);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  console.log('cards: ', cards);
 
-    if (cardRef.current) {
+  useEffect(() => {
+    if (containerRef.current) {
       const shift = {
         x: 0,
         y: 0,
       };
-      cardRef.current.addEventListener('touchstart', dragStart(shift, cardRef.current));
-      cardRef.current.addEventListener('touchmove', dragMove(shift, cardRef.current));
-      cardRef.current.addEventListener('touchend', dragEnd(cardRef.current, dispatch));
-      cardRef.current.ondragstart = () => {
+      containerRef.current.addEventListener(
+        'touchstart',
+        dragStart(shift, containerRef.current),
+      );
+      containerRef.current.addEventListener(
+        'touchmove',
+        dragMove(shift, containerRef.current),
+      );
+      containerRef.current.addEventListener(
+        'touchend',
+        dragEnd(containerRef.current, dispatch),
+      );
+      containerRef.current.ondragstart = () => {
         return null;
-      }
+      };
 
       return () => {
-        cardRef.current.removeEventListener('touchstart', dragStart);
-        cardRef.current.removeEventListener('touchmove', dragMove);
-        cardRef.current.removeEventListener('touchend', dragEnd);
+        containerRef.current.removeEventListener('touchstart', dragStart);
+        containerRef.current.removeEventListener('touchmove', dragMove);
+        containerRef.current.removeEventListener('touchend', dragEnd);
       };
     }
   }, [dispatch]);
 
   const cardsElems = cards?.map((item, index) => (
-    <div ref={item.active ? cardRef : null} id={item.id} key={item.id} style={{ zIndex: cards.length - item.id, transform: `scale(${(20 - index) / 20}) translateY(-${30 * index}px)` }} className={styles.card}>
+    <div
+      ref={item.active ? cardRef : null}
+      id={item.id}
+      key={item.id}
+      style={{
+        zIndex: cards.length === 1 ? 1 : cards.length - item.id,
+        transform: `scale(${(20 - index) / 20}) translateY(-${30 * index}px)`,
+      }}
+      className={`${styles.card} card`}
+    >
       <div className={styles.card__body}>
         <p className={styles.card__text}>{item.text}</p>
       </div>

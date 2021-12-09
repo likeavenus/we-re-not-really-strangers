@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog {
+    width: 90%;
+    height: 60%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px 15px;
+    font-weight: 500;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.dialog__text {
+    font-size: 20px;
+
+    & span {
+        color: $red;
+    }
+}
+
+.dialog__btn {
+    color: $red;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border: 2px solid silver;
+    border-radius: 25px;
+    padding: 6px 30px;
+    font-weight: bold;
+}

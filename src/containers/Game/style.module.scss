@@ -13,6 +13,7 @@
     align-items: center;
     overflow: hidden;
     position: relative;
+    transition: all .3s ease;
 }
 
 .card {
@@ -73,7 +74,7 @@
     }
 
     &.love {
-        color: #b72e32;
+        color: $red;
 
         &:after {
             content: '';
@@ -106,5 +107,5 @@
 
 .footer__text {
     font-size: 18px;
-    color: #b72e32;
+    color: $red;
 }

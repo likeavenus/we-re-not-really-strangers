@@ -35,7 +35,7 @@ export function dragMove(shift, container) {
                 container.style.backgroundColor = 'lightgreen';
                 
             } else if (triggerValue < 0 + CARD_GAP) {
-                container.style.backgroundColor = 'red';
+                container.style.backgroundColor = '#b72e32';
             } else {
                 container.style.backgroundColor = 'transparent';
             }

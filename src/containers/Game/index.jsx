@@ -1,10 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { dragStart, dragMove, dragEnd } from './utils';
+import { Dialog } from '../../components/Dialog';
 import styles from './style.module';
 
 export const Game = () => {
+  
+  const [open, setState] = useState(true);
+  const handleOnClick = useCallback(() => {
+    setState((prev) => !prev);
+  });
+
   const containerRef = useRef();
   const cards = useSelector((state) => state.game.cards);
   const dispatch = useDispatch();
@@ -66,6 +73,7 @@ export const Game = () => {
 
   return (
     <div className={styles.game}>
+      <Dialog open={open} setState={handleOnClick} />
       <section className={styles.game__container} ref={containerRef}>
         {cardsElems}
       </section>

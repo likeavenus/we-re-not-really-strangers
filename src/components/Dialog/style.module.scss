@@ -18,7 +18,7 @@
 
 .dialog {
     width: 90%;
-    height: 60%;
+    height: 80%;
     background: #fff;
     border-radius: 20px;
     padding: 25px 15px;
@@ -29,9 +29,18 @@
 
 .dialog__text {
     font-size: 20px;
+    margin-bottom: 20px;
 
     & span {
         color: $red;
+    }
+}
+
+.dialog__author {
+    font-size: 19px;
+
+    & a {
+        color: #239fdb;
     }
 }
 

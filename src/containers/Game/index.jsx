@@ -77,6 +77,7 @@ export const Game = () => {
       <section className={styles.game__container} ref={containerRef}>
         {cardsElems}
       </section>
+      <button className={styles.game__info} onClick={handleOnClick}></button>
     </div>
   );
 };

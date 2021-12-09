@@ -109,3 +109,13 @@
     font-size: 18px;
     color: $red;
 }
+
+.game__info {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: url('../../assets/info.png') no-repeat center;
+    background-size: contain;
+}

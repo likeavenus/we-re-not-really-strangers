@@ -1,0 +1,185 @@
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/components/Dialog/style.module.scss ***!
+  \******************************************************************************************************************************************************************************************/
+.style-module__modal--UAYdG {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.style-module__dialog--tjjzp {
+  width: 90%;
+  height: 60%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 15px;
+  font-weight: 500;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.style-module__dialog__text--hhHv9 {
+  font-size: 20px;
+}
+.style-module__dialog__text--hhHv9 span {
+  color: #b72e32;
+}
+
+.style-module__dialog__btn--gKPpk {
+  color: #b72e32;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid silver;
+  border-radius: 25px;
+  padding: 6px 30px;
+  font-weight: bold;
+}
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/containers/Game/style.module.scss ***!
+  \****************************************************************************************************************************************************************************************/
+.style-module__game--RsQR9 {
+  height: 100vh;
+  width: 100%;
+}
+
+.style-module__game__container--kE_6u {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.style-module__card--LeKck {
+  width: 90%;
+  height: 66%;
+  border-radius: 30px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  will-change: transform;
+  cursor: grab;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+.style-module__card--LeKck.style-module__active--xmcNT {
+  z-index: 50;
+}
+.style-module__card--LeKck div {
+  pointer-events: none;
+}
+.style-module__card--LeKck.style-module__enter__active--Hsc7k {
+  transform: scale(1) translateY(0px);
+}
+.style-module__card--LeKck.style-module__enter__done--Ryh0r {
+  transform: scale(1) translateY(0px);
+}
+.style-module__card--LeKck.style-module__life--ogDjb {
+  color: black;
+}
+.style-module__card--LeKck.style-module__life--ogDjb:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(bc8fe1f6ea038d20768a.png);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: repeat;
+  opacity: 0.3;
+}
+.style-module__card--LeKck.style-module__love--LpCxT {
+  color: #b72e32;
+}
+.style-module__card--LeKck.style-module__love--LpCxT:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(66c381c8dab4ce2edfcd.png);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: repeat;
+  opacity: 0.1;
+}
+
+.style-module__card__body--QZE0X {
+  width: 98%;
+  margin: 0 auto 30px;
+}
+
+.style-module__card__text--zVSXI {
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.style-module__footer__text--a4b5k {
+  font-size: 18px;
+  color: #b72e32;
+}
+/*!************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/style.module.scss ***!
+  \************************************************************************************************************************************************************************/
+body {
+  background-color: #fff;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Roboto", monospace;
+  touch-action: manipulation;
+}
+
+.style-module__app--Im1ca {
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  transition: all 0.15s ease;
+  font-family: "Roboto", monospace;
+}
+
+a {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

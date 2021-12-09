@@ -43,14 +43,17 @@ export function dragMove(shift, container) {
     }
 }
 
-/** TODO: Разобраться с навешиванием обработчиков событий на следующую карточку */
+const handleRemoveCard = (e, dispatch) => {
+    setTimeout(() => {
+        dispatch(removeCard(e.target.id));
+    }, 100);
+};
 
 export function dragEnd(container, dispatch) {
     return function(e) {
         e.preventDefault();
         if (e.target.classList.contains('card')) {
             const currentCard = container.querySelector('.card');
-            console.log('card: ', currentCard)
 
             const rect = currentCard.getBoundingClientRect();
             const windowWidth = window.innerWidth + CARD_GAP;
@@ -60,13 +63,13 @@ export function dragEnd(container, dispatch) {
             if (triggerValue > windowWidth) {
                 currentCard.style.transform = 'translateX(200%)';
                 currentCard.style.transition = 'all 0.35s ease';
-                dispatch(removeCard(e.target.id));
+                handleRemoveCard(e, dispatch);
     
                 
             } else if (triggerValue < 0 + CARD_GAP) {
                 currentCard.style.transform = 'translateX(-200%)';
                 currentCard.style.transition = 'all 0.35s ease';
-                dispatch(removeCard(e.target.id));
+                handleRemoveCard(e, dispatch);
             } else {
                 currentCard.style.transition = 'all 0.35s ease';
                 currentCard.style.transform = 'scale(1) translateY(0px)';

@@ -6,11 +6,14 @@ import styles from './style.module';
 
 export const Game = () => {
   const containerRef = useRef();
-  const cardRef = useRef();
   const cards = useSelector((state) => state.game.cards);
   const dispatch = useDispatch();
 
+  const allCardsLength = useRef(cards.length);
+
   console.log('cards: ', cards);
+
+  const length = allCardsLength.current;
 
   useEffect(() => {
     if (containerRef.current) {
@@ -43,23 +46,22 @@ export const Game = () => {
   }, [dispatch]);
 
   const cardsElems = cards?.map((item, index) => (
-    <div
-      ref={item.active ? cardRef : null}
-      id={item.id}
-      key={item.id}
-      style={{
-        zIndex: cards.length === 1 ? 1 : cards.length - item.id,
-        transform: `scale(${(20 - index) / 20}) translateY(-${30 * index}px)`,
-      }}
-      className={`${styles.card} card`}
-    >
-      <div className={styles.card__body}>
-        <p className={styles.card__text}>{item.text}</p>
+      <div
+        id={item.id}
+        key={item.id}
+        style={{
+          zIndex: cards.length === 1 ? 1 : length - item.id,
+          transform: `scale(${(20 - index) / 20}) translateY(-${30 * index}px)`,
+        }}
+        className={`${styles.card} ${styles[item.type]} card`}
+      >
+        <div className={styles.card__body}>
+          <p className={styles.card__text}>{item.text}</p>
+        </div>
+        <div className={styles.card__footer}>
+          <p className={styles.footer__text}>мы не незнакомцы</p>
+        </div>
       </div>
-      <div className={styles.card__footer}>
-        <p className={styles.footer__text}>мы не незнакомцы</p>
-      </div>
-    </div>
   ));
 
   return (

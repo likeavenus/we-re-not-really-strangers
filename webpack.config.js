@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -52,7 +52,7 @@ module.exports = {
                             modules: {
                                 mode: 'local',
                                 auto: true,
-                                localIdentName: "[name]__[local]--[hash:base64:5]",
+                                localIdentName: '[name]__[local]--[hash:base64:5]',
                             },
                             sourceMap: isDev,
                         }

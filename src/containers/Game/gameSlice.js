@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const cards = [
     {
         id: '0',
-        type: 'life',
-        text: 'Как думаешь, я когда-нибудь сбегал(а) из дома будучи подростком?',
+        type: 'love',
+        text: 'На какое приключение ты бы хотел пойти со мной?',
         active: true,
     },
     {
@@ -29,6 +29,12 @@ const cards = [
         id: '4',
         type: 'life',
         text: 'Были ли у тебя проблемы с законом?',
+        active: false,
+    },
+    {
+        id: '5',
+        type: 'love',
+        text: 'Что тебе действительно нравится во мне?',
         active: false,
     },
 ];

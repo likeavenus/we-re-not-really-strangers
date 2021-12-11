@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { dragStart, dragMove, dragEnd } from './utils';
 import { Dialog } from '../../components/Dialog';
+import { SnowFlakes } from '../../components/SnowFlakes';
 import styles from './style.module';
 
 export const Game = () => {
@@ -73,6 +74,7 @@ export const Game = () => {
 
   return (
     <div className={styles.game}>
+      <SnowFlakes />
       <Dialog open={open} setState={handleOnClick} />
       <section className={styles.game__container} ref={containerRef}>
         {cardsElems}

@@ -4,7 +4,26 @@ object-assign
 @license MIT
 */
 
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+/*! ../../api */
+
 /*! ../../components/Dialog */
+
+/*! ../../components/Feedback */
 
 /*! ../../components/SnowFlakes */
 
@@ -35,6 +54,8 @@ object-assign
 /*! ./Game */
 
 /*! ./Particle */
+
+/*! ./api.js */
 
 /*! ./batch */
 
@@ -88,7 +109,13 @@ object-assign
 
 /*! ./mergeProps */
 
+/*! ./regex.js */
+
+/*! ./rng.js */
+
 /*! ./selectorFactory */
+
+/*! ./stringify.js */
 
 /*! ./style.module */
 
@@ -104,6 +131,8 @@ object-assign
 
 /*! ./utils/shallowEqual */
 
+/*! ./validate.js */
+
 /*! ./verifySubselectors */
 
 /*! ./warning */
@@ -116,11 +145,35 @@ object-assign
 
 /*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */
 
+/*! @firebase/analytics */
+
+/*! @firebase/app */
+
+/*! @firebase/component */
+
+/*! @firebase/firestore */
+
+/*! @firebase/installations */
+
+/*! @firebase/logger */
+
+/*! @firebase/util */
+
+/*! @firebase/webchannel-wrapper */
+
 /*! @reduxjs/toolkit */
+
+/*! firebase/analytics */
+
+/*! firebase/app */
+
+/*! firebase/firestore */
 
 /*! history */
 
 /*! hoist-non-react-statics */
+
+/*! idb */
 
 /*! immer */
 
@@ -144,11 +197,21 @@ object-assign
 
 /*! redux-thunk */
 
+/*! regenerator-runtime/runtime.js */
+
 /*! reselect */
 
 /*! scheduler */
 
 /*! scheduler/tracing */
+
+/*! tslib */
+
+/*! uuid */
+
+/*!********************!*\
+  !*** ./src/api.js ***!
+  \********************/
 
 /*!*********************!*\
   !*** ./src/App.jsx ***!
@@ -183,6 +246,10 @@ object-assign
   \***************************************/
 
 /*!***************************************!*\
+  !*** ./node_modules/idb/build/idb.js ***!
+  \***************************************/
+
+/*!***************************************!*\
   !*** ./src/containers/Game/index.jsx ***!
   \***************************************/
 
@@ -203,6 +270,10 @@ object-assign
   \*****************************************/
 
 /*!*****************************************!*\
+  !*** ./node_modules/tslib/tslib.es6.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
   !*** ./src/components/Dialog/index.jsx ***!
   \*****************************************/
 
@@ -220,6 +291,10 @@ object-assign
 
 /*!*******************************************!*\
   !*** ./node_modules/scheduler/tracing.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/components/Feedback/index.jsx ***!
   \*******************************************/
 
 /*!********************************************!*\
@@ -266,8 +341,20 @@ object-assign
   !*** ./src/components/Dialog/style.module.scss ***!
   \*************************************************/
 
+/*!**************************************************!*\
+  !*** ./node_modules/uuid/dist/esm-browser/v4.js ***!
+  \**************************************************/
+
 /*!***************************************************!*\
   !*** ./node_modules/prop-types/checkPropTypes.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/uuid/dist/esm-browser/rng.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/Feedback/style.module.scss ***!
   \***************************************************/
 
 /*!****************************************************!*\
@@ -279,7 +366,19 @@ object-assign
   \****************************************************/
 
 /*!*****************************************************!*\
+  !*** ./node_modules/firebase/app/dist/index.esm.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/uuid/dist/esm-browser/regex.js ***!
   \*****************************************************/
 
 /*!*****************************************************!*\
@@ -298,6 +397,18 @@ object-assign
   !*** ./node_modules/react-redux/es/connect/connect.js ***!
   \********************************************************/
 
+/*!********************************************************!*\
+  !*** ./node_modules/uuid/dist/esm-browser/validate.js ***!
+  \********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/uuid/dist/esm-browser/stringify.js ***!
+  \*********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/@firebase/app/dist/index.esm2017.js ***!
+  \**********************************************************/
+
 /*!**********************************************************!*\
   !*** ./node_modules/react-redux/es/hooks/useDispatch.js ***!
   \**********************************************************/
@@ -305,6 +416,18 @@ object-assign
 /*!**********************************************************!*\
   !*** ./node_modules/react-redux/es/hooks/useSelector.js ***!
   \**********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/@firebase/util/dist/index.esm2017.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/firebase/analytics/dist/index.esm.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/firebase/firestore/dist/index.esm.js ***!
+  \***********************************************************/
 
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -331,6 +454,10 @@ object-assign
   \************************************************************/
 
 /*!************************************************************!*\
+  !*** ./node_modules/@firebase/component/dist/index.esm.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
   !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
   \************************************************************/
 
@@ -341,6 +468,10 @@ object-assign
 /*!************************************************************!*\
   !*** ./node_modules/react-redux/es/utils/isPlainObject.js ***!
   \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/@firebase/logger/dist/index.esm2017.js ***!
+  \*************************************************************/
 
 /*!*************************************************************!*\
   !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
@@ -361,6 +492,14 @@ object-assign
 /*!***************************************************************!*\
   !*** ./node_modules/react-redux/es/connect/wrapMapToProps.js ***!
   \***************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/@firebase/analytics/dist/index.esm2017.js ***!
+  \****************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/@firebase/firestore/dist/index.esm2017.js ***!
+  \****************************************************************/
 
 /*!****************************************************************!*\
   !*** ./node_modules/prop-types/node_modules/react-is/index.js ***!
@@ -410,6 +549,10 @@ object-assign
   !*** ./node_modules/react-redux/es/connect/verifySubselectors.js ***!
   \*******************************************************************/
 
+/*!********************************************************************!*\
+  !*** ./node_modules/@firebase/installations/dist/index.esm2017.js ***!
+  \********************************************************************/
+
 /*!*********************************************************************!*\
   !*** ./node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
   \*********************************************************************/
@@ -417,6 +560,10 @@ object-assign
 /*!************************************************************************!*\
   !*** ./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js ***!
   \************************************************************************/
+
+/*!*************************************************************************!*\
+  !*** ./node_modules/@firebase/webchannel-wrapper/dist/index.esm2017.js ***!
+  \*************************************************************************/
 
 /*!*****************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/node_modules/react-is/index.js ***!
@@ -437,6 +584,91 @@ object-assign
 /*!************************************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.development.js ***!
   \************************************************************************************************/
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @license
+ * Copyright 2018 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @license
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 /**
  * Checks if an event is supported in the current execution environment.

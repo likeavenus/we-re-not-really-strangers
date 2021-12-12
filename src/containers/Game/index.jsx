@@ -4,14 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { dragStart, dragMove, dragEnd } from './utils';
 import { Dialog } from '../../components/Dialog';
 import { SnowFlakes } from '../../components/SnowFlakes';
+import { Feedback } from '../../components/Feedback';
 import styles from './style.module';
 
 export const Game = () => {
-  
   const [open, setState] = useState(true);
   const handleOnClick = useCallback(() => {
     setState((prev) => !prev);
-  });
+  }, []);
 
   const containerRef = useRef();
   const cards = useSelector((state) => state.game.cards);
@@ -46,9 +46,9 @@ export const Game = () => {
       };
 
       return () => {
-        containerRef.current.removeEventListener('touchstart', dragStart);
-        containerRef.current.removeEventListener('touchmove', dragMove);
-        containerRef.current.removeEventListener('touchend', dragEnd);
+        containerRef?.current?.removeEventListener('touchstart', dragStart);
+        containerRef?.current?.removeEventListener('touchmove', dragMove);
+        containerRef?.current?.removeEventListener('touchend', dragEnd);
       };
     }
   }, [dispatch]);
@@ -78,6 +78,7 @@ export const Game = () => {
       <Dialog open={open} setState={handleOnClick} />
       <section className={styles.game__container} ref={containerRef}>
         {cardsElems}
+        {!cards.length && <Feedback />}
       </section>
       <button className={styles.game__info} onClick={handleOnClick}></button>
     </div>

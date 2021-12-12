@@ -37,7 +37,8 @@
 }
 
 .dialog__author {
-    font-size: 19px;
+    font-size: 15px;
+    margin-bottom: 20px;
 
     & a {
         color: #239fdb;
@@ -45,11 +46,10 @@
 }
 
 .dialog__btn {
+    display: block;
+    margin-left: auto;
     color: $red;
     font-size: 20px;
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
     border: 2px solid silver;
     border-radius: 25px;
     padding: 6px 30px;

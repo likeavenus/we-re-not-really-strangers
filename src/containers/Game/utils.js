@@ -5,12 +5,14 @@ const CARD_GAP = 30;
 export function dragStart(shift, container) {
     return function(event) {
         container.style.backgroundColor = 'transparent';
-        const card = container.firstChild;
-        const touch = event.targetTouches[0];
-        const rect = container.firstChild.getBoundingClientRect();
-        shift.x = touch.clientX - rect.x;
-        shift.y = touch.clientY - rect.y;
-        card.style.transition = 'none';
+        const card = container?.firstChild;
+        if (card) {
+            const touch = event.targetTouches[0];
+            const rect = container.firstChild.getBoundingClientRect();
+            shift.x = touch.clientX - rect.x;
+            shift.y = touch.clientY - rect.y;
+            card.style.transition = 'none';
+        }
     }
 }
 
@@ -18,7 +20,6 @@ export function dragMove(shift, container) {
     const cardForRect = container.querySelector('.card');
     const rect = cardForRect.getBoundingClientRect();
     return function(e) {
-        e.preventDefault();
         if (e.target.classList.contains('card')) {
             const touch = e.targetTouches[0];
             const moveX = touch.clientX - shift.x - rect.x;
@@ -51,7 +52,6 @@ const handleRemoveCard = (e, dispatch) => {
 
 export function dragEnd(container, dispatch) {
     return function(e) {
-        e.preventDefault();
         if (e.target.classList.contains('card')) {
             const currentCard = container.querySelector('.card');
 

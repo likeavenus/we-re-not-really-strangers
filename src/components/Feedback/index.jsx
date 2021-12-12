@@ -26,7 +26,7 @@ export const Feedback = () => {
 
     return (
         <div className={styles.form}>
-            <h2 className={styles.form__title}>Если у вас есть предложения и пожелания, вы можете оствить их тут:</h2>
+            <h2 className={styles.form__title}>Если у вас есть предложения или пожелания, вы можете оставить их тут:</h2>
             <textarea value={message} onChange={handleOnChange} className={styles.form__textarea} />
             {reqStatus?.success ? (
                 <div className={styles.status}>{reqStatus.message} Спасибо за отзыв!</div>
